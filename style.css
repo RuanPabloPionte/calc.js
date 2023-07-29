@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* variaveis  rgb(16, 235, 231);*/
+:root{
+    /* colors */
+    --bgColor:rgb(17, 16, 16);
+    --primaryColor:rgb(16, 235, 231);
+    --fontColor:rgba(255, 255, 255, 0.885);
+    --error-color:#e21616ed;
+    
+
+    /* sizing */
+    --btnHeight:8vh;
+    --font-size:1.5rem;
+
+    /* borders */
+    --borderRadius:0.4rem;
+}
+
+main{
+    background-color: var(--bgColor);
+    color:var(--fontColor);
+    border:1px solid var(--primaryColor);
+}
+.container{
+    min-height:100vh;
+    display:grid;
+    place-items: center;
+    padding: 1rem;
+    
+}
+.container .header{
+    width:60vw;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+    /* border:1px solid red; */
+}
+.btnTheme{
+    height: var(--btnHeight);
+    width: 20vw;
+}
+.btn{
+    background: var(--bgColor);
+    color:var(--fontColor);
+    border:2px solid var(--fontColor);
+    border-radius: var(--borderRadius);
+    transition: 0.5s;
+}
+.btn:hover{
+    cursor: pointer;
+    border-color:var(--primaryColor);
+}
+input{
+    text-align: right;
+    height:var(--btnHeight);
+    border:2px solid var(--fontColor);
+    border-radius: var(--borderRadius);
+    background: var(--bgColor);
+    color:var(--fontColor);
+    font-size: var(--font-size);  
+}
+input:focus{
+    color:var(--primaryColor);
+}
+
+.inputContainer{
+    width:60vw;
+}
+
+
+
+.container .containerKeys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height:70vh;
+    width:60vw;
+    gap:0.5rem;
+    padding: 10px 10px;
+    
+    /* border:1px solid red; */
+
+  
+}
+.key{
+    height: 5rem;
+    font-size: var(--font-size);
+    border-radius: var(--borderRadius);
+    background: var(--primaryColor); 
+}
+.key:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.resultSection{
+   display: flex;
+   align-items: center;
+   border:2px solid var(--fontColor);border-radius: var(--borderRadius);
+}
+.resultSection .btn{
+    height: var(--btnHeight);
+    width:max-content;
+    padding: 1rem;
+    border:transparent;
+    border-right: 2px solid var(--fontColor) !important;
+
+}
+.resultSection input{
+    
+    width:52vw;
+    border: none !important;;
+}
+
+/* class para btn quando copiado */
+.success{
+    transition: 0.5s;
+    background-color: var(--primaryColor);
+    font-weight: 700;
+    color:var(--bgColor)
+
+}
+.error {
+    background-color: var(--error-color);
+  }
